@@ -5,7 +5,7 @@ description: Replace the background of raw video clips with a user-supplied imag
 
 # Background replace (RVM + ffmpeg)
 
-Everything runs from the workspace root `/home/akash/workspaces/video-workspaces`.
+Everything runs from the workspace root (the folder that contains CLAUDE.md).
 CPU only (no NVIDIA GPU): measured @1080p: mobilenetv3 ≈ 9 fps, resnet50 ≈ 4.7 fps matting, compositing ≈ 8 fps (1 min 1080p30 final ≈ 10–12 min). ProRes alpha output is big (~70 MB/s of footage). Run long renders with `run_in_background`.
 
 ## 0. Setup (once)
