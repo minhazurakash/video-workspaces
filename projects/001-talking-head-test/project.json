@@ -1,0 +1,67 @@
+{
+  "title": "Talking head test",
+  "created": "2026-11-11",
+  "status": "done",
+  "background": "input/bg/blue_arcs.png",
+  "preview_seconds": 5,
+  "models": {
+    "preview": "mobilenetv3",
+    "final": "resnet50"
+  },
+  "downsample_ratio": null,
+  "temporal_smooth": {
+    "radius": 3,
+    "range_sigma": 0.2
+  },
+  "bg": {
+    "fit": "cover",
+    "offset_x": 0.0,
+    "offset_y": 0.5,
+    "zoom": 1.3,
+    "blur": 6
+  },
+  "look": {
+    "light_match": 0.35,
+    "color_match": 0.35,
+    "light_wrap": 0.25,
+    "light_wrap_radius": 30,
+    "edge_soften": 1.0,
+    "grain": 0
+  },
+  "outputs": {
+    "alpha_mov": true
+  },
+  "clip_overrides": {},
+  "clips": {
+    "talking_head.mp4": {
+      "preview": {
+        "mode": "preview",
+        "model": "mobilenetv3",
+        "frames": 120,
+        "matte_fps": 12.86,
+        "rendered": "2026-11-11T10:34:16",
+        "outputs": {
+          "video": "output/talking_head_preview.mp4",
+          "before_after": "output/talking_head_preview_before_after.png"
+        }
+      },
+      "outputs": {
+        "video": "output/talking_head_final.mp4",
+        "before_after": "output/talking_head_final_before_after.png",
+        "alpha_mov": "output/talking_head_fg_alpha.mov"
+      },
+      "final": {
+        "mode": "final",
+        "model": "resnet50",
+        "frames": 833,
+        "matte_fps": 5.19,
+        "rendered": "2026-11-11T11:03:20",
+        "outputs": {
+          "video": "output/talking_head_final.mp4",
+          "before_after": "output/talking_head_final_before_after.png",
+          "alpha_mov": "output/talking_head_fg_alpha.mov"
+        }
+      }
+    }
+  }
+}

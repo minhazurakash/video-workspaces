@@ -1,0 +1,36 @@
+{
+  "title": "",
+  "created": "",
+  "status": "new",
+  "background": null,
+  "preview_seconds": 5,
+  "models": {
+    "preview": "mobilenetv3",
+    "final": "resnet50"
+  },
+  "downsample_ratio": null,
+  "temporal_smooth": {
+    "radius": 3,
+    "range_sigma": 0.2
+  },
+  "bg": {
+    "fit": "cover",
+    "offset_x": 0.5,
+    "offset_y": 0.5,
+    "zoom": 1.0,
+    "blur": 6
+  },
+  "look": {
+    "light_match": 0.35,
+    "color_match": 0.35,
+    "light_wrap": 0.25,
+    "light_wrap_radius": 30,
+    "edge_soften": 1.0,
+    "grain": 0
+  },
+  "outputs": {
+    "alpha_mov": true
+  },
+  "clip_overrides": {},
+  "clips": {}
+}

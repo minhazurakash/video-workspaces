@@ -1,0 +1,67 @@
+{
+  "title": "Smoke test",
+  "created": "2026-11-11",
+  "status": "done",
+  "background": null,
+  "preview_seconds": 5,
+  "models": {
+    "preview": "mobilenetv3",
+    "final": "resnet50"
+  },
+  "downsample_ratio": null,
+  "temporal_smooth": {
+    "radius": 3,
+    "range_sigma": 0.2
+  },
+  "bg": {
+    "fit": "cover",
+    "offset_x": 0.5,
+    "offset_y": 0.5,
+    "zoom": 1.0,
+    "blur": 6
+  },
+  "look": {
+    "light_match": 0.35,
+    "color_match": 0.35,
+    "light_wrap": 0.25,
+    "light_wrap_radius": 30,
+    "edge_soften": 1.0,
+    "grain": 0
+  },
+  "outputs": {
+    "alpha_mov": true
+  },
+  "clip_overrides": {},
+  "clips": {
+    "walkers.mp4": {
+      "preview": {
+        "mode": "preview",
+        "model": "mobilenetv3",
+        "frames": 125,
+        "matte_fps": 9.35,
+        "rendered": "2026-11-11T10:20:31",
+        "outputs": {
+          "video": "output/walkers_preview.mp4",
+          "before_after": "output/walkers_preview_before_after.png"
+        }
+      },
+      "outputs": {
+        "video": "output/walkers_final.mp4",
+        "before_after": "output/walkers_final_before_after.png",
+        "alpha_mov": "output/walkers_fg_alpha.mov"
+      },
+      "final": {
+        "mode": "final",
+        "model": "resnet50",
+        "frames": 150,
+        "matte_fps": 4.72,
+        "rendered": "2026-11-11T10:22:11",
+        "outputs": {
+          "video": "output/walkers_final.mp4",
+          "before_after": "output/walkers_final_before_after.png",
+          "alpha_mov": "output/walkers_fg_alpha.mov"
+        }
+      }
+    }
+  }
+}
